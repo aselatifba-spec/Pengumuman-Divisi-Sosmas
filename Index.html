@@ -1,0 +1,68 @@
+# Pengumuman-Divisi-Sosmas
+#Hayo kamu di manaaaa
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pengumuman Divisi</title>
+</head>
+<body style="text-align:center; font-family:sans-serif; margin-top:100px;">
+
+<h1>Pengumuman Divisi 🎉</h1>
+
+<input type="text" id="nama" placeholder="Masukkan nama kamu">
+<button onclick="cekHasil()">Cek Hasil</button>
+
+<h2 id="result"></h2>
+
+<script>
+function cekHasil() {
+  var nama = document.getElementById("nama").value.toLowerCase();
+
+  var soskre = [
+    "muhammad dzaky yumna",
+    "devista alfianti",
+    "fairuz syifa khalila",
+    "khalid azzarya ramadhan",
+    "andika khoirul dzaki",
+    "nadia raya",
+    "nizar sheva ananta",
+    "muhammad taqiyuddin tsaqib",
+    "reihan adya fahreza",
+    "sarah zahida rahman",
+    "claudia ramadhani",
+    "annisa zada anindita"
+  ];
+
+  var pengabdian = [
+    "aseanthy trias nur latifba",
+    "angger dimas bagaskara",
+    "akbar ridho isya'i",
+    "briggita aurelia dwi a.",
+    "heribertus rendra widyo putro sutanto",
+    "satrio budiharjo",
+    "vanesya michellyn cannviera",
+    "pradika satrio setiawan",
+    "restu aji putra pratama",
+    "nafauddina fathin",
+    "alya khairunnisa",
+    "fernanda bariklana agustian"
+  ];
+
+  var hasil = "";
+
+  if (soskre.includes(nama)) {
+    hasil = "Sosial Kreatif";
+  } else if (pengabdian.includes(nama)) {
+    hasil = "Pengabdian";
+  } else {
+    hasil = "Tidak terdaftar 😢";
+  }
+
+  document.getElementById("result").innerHTML =
+    "Selamat " + nama + "! Kamu masuk <b>" + hasil + "</b>";
+}
+</script>
+
+</body>
+</html>
